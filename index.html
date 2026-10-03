@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Inventory Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Product Inventory Manager</h1>
+    </header>
+
+    <main>
+
+        <!-- Add Product -->
+        <section class="form-section">
+
+            <h2>Add Product</h2>
+
+            <form id="product-form">
+
+                <input
+                    type="text"
+                    id="product-id"
+                    placeholder="Product ID"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="product-name"
+                    placeholder="Product Name"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="product-price"
+                    placeholder="Price"
+                    step="0.01"
+                    min="0"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="product-tags"
+                    placeholder="Tags (comma separated)"
+                >
+
+                <label>
+                    <input
+                        type="checkbox"
+                        id="product-instock"
+                    >
+                    In Stock
+                </label>
+
+                <button type="submit">
+                    Add Product
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Inventory Controls -->
+        <section class="controls">
+
+            <h2>Inventory</h2>
+
+            <button
+                type="button"
+                id="show-all-btn"
+                class="btn active"
+            >
+                Show All
+            </button>
+
+            <button
+                type="button"
+                id="show-available-btn"
+                class="btn"
+            >
+                Show Available
+            </button>
+
+        </section>
+
+
+        <!-- Inventory Table -->
+        <section class="inventory-section">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Status</th>
+                        <th>Tags</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="inventory-table-body">
+                    <!-- Products inserted by app.js -->
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
